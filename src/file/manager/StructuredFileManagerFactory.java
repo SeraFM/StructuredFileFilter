@@ -23,12 +23,13 @@ public class StructuredFileManagerFactory implements StructuredFileManagerInterf
 
     public StructuredFileManagerFactory(){}//default costructor
 
-    ColumnNames cn; // = new ColumnNames();
+    ColumnNames cn;
 
     setupFilteringEngine setF;
 
     @Override
     public File registerFile(String pAlias, String pPath, String pSeparator){//touti malakia dias tis stixia k kamni return mia kenourgia katagrafi sto path pou mas dia
+        this.cn = new ColumnNames();
         this.pAlias = pAlias;
         this.pPath = pPath;
         this.pSeparator = pSeparator;

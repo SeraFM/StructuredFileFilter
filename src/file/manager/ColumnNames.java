@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ColumnNames{
+public class ColumnNames extends StructuredFileManagerFactory{
 
 
 
@@ -18,13 +18,14 @@ public class ColumnNames{
     private Map<String, List<String>> AllFileData = new HashMap<String, List<String>>();
     private char sep;
 
-    public ColumnNames(){}
+    //public ColumnNames(){}
 
-    StructuredFileManagerFactory obj; //= new StructuredFileManagerFactory();
+    //StructuredFileManagerFactory obj = new StructuredFileManagerFactory();
 
 
     public void Names(){
-        this.f = obj.getFile();
+       // this.f = obj.getFile();
+        this.f = getFile();
         try {
             fr=new FileReader(f);
         } catch (FileNotFoundException e1) {
@@ -34,7 +35,8 @@ public class ColumnNames{
         br=new BufferedReader(fr);
         int c = 0;
         int i = 0;
-        sep = obj.getpSeparator().charAt(0);
+        //sep = obj.getpSeparator().charAt(0);
+        this.sep = getpSeparator().charAt(0);
         try {
             while((c = br.read()) != -1){
                 char chr = (char) c;
