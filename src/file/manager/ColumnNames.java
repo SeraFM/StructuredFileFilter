@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ColumnNames extends StructuredFileManagerFactory {
+public class ColumnNames{
+
+
 
     private File f ;
     private FileReader fr;
@@ -15,13 +17,14 @@ public class ColumnNames extends StructuredFileManagerFactory {
     private String[] colNames, fileData;
     private Map<String, List<String>> AllFileData = new HashMap<String, List<String>>();
     private char sep;
-    //public StructuredFileManagerFactory obj = new StructuredFileManagerFactory();
 
     public ColumnNames(){}
 
+    StructuredFileManagerFactory obj; //= new StructuredFileManagerFactory();
+
 
     public void Names(){
-        this.f = getFile();
+        this.f = obj.getFile();
         try {
             fr=new FileReader(f);
         } catch (FileNotFoundException e1) {
@@ -31,7 +34,7 @@ public class ColumnNames extends StructuredFileManagerFactory {
         br=new BufferedReader(fr);
         int c = 0;
         int i = 0;
-        sep = getpSeparator().charAt(0);
+        sep = obj.getpSeparator().charAt(0);
         try {
             while((c = br.read()) != -1){
                 char chr = (char) c;
@@ -51,14 +54,14 @@ public class ColumnNames extends StructuredFileManagerFactory {
     }
 
     public void FileToMap(){
-        this.f = getFile();
+        //this.f = getFile();
         try {
             fr=new FileReader(f);
         } catch (FileNotFoundException e1) {
             // TODO Auto-generated catch block
             e1.printStackTrace();
         }
-        sep = getpSeparator().charAt(0);
+       // sep = getpSeparator().charAt(0);
         String firstline, line;
         try (BufferedReader br = new BufferedReader(new FileReader(f))) {
             firstline = br.readLine();

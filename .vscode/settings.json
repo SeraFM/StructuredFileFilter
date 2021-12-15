@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "src/application/naive/client"
+        "src/application/naive/client",
+        "src"
     ],
     "java.project.outputPath": "bin"
 }

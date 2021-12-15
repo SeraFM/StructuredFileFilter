@@ -20,12 +20,12 @@ public class StructuredFileManagerFactory implements StructuredFileManagerInterf
     private  List<String[]> filterStructFiles;
     private File file;
     private Map<String, List<String>> AllFileData = new HashMap<String, List<String>>();
-    ColumnNames cn = new ColumnNames();
-
-    
-    private setupFilteringEngine setF;
 
     public StructuredFileManagerFactory(){}//default costructor
+
+    ColumnNames cn; // = new ColumnNames();
+
+    setupFilteringEngine setF;
 
     @Override
     public File registerFile(String pAlias, String pPath, String pSeparator){//touti malakia dias tis stixia k kamni return mia kenourgia katagrafi sto path pou mas dia
