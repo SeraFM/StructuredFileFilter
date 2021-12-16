@@ -27,6 +27,8 @@ public class MainEngine{
 
         Scanner read = new Scanner(System.in);
 
+        System.out.println("FILE FILTERING");
+
         System.out.println("Give File Name: ");
         alias = read.nextLine();
 
