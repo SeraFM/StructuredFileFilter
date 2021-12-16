@@ -28,7 +28,7 @@ public class StructuredFileManagerFactory implements StructuredFileManagerInterf
     setupFilteringEngine setF;
 
     @Override
-    public File registerFile(String pAlias, String pPath, String pSeparator){//touti malakia dias tis stixia k kamni return mia kenourgia katagrafi sto path pou mas dia
+    public File registerFile(String pAlias, String pPath, String pSeparator){
         this.cn = new ColumnNames();
         this.pAlias = pAlias;
         this.pPath = pPath;
@@ -40,13 +40,13 @@ public class StructuredFileManagerFactory implements StructuredFileManagerInterf
     }
 
     @Override
-    public String[] getFileColumnNames(String pAlias){// touto epistrefi mia sigkekrimeni stili t pinaka ta onomata olon ton kataxoriseon pou exoun gini. an den exoun gini kata xorisis epistrefi null
+    public String[] getFileColumnNames(String pAlias){// epistrefi mia sigkekrimeni stili t pinaka ta onomata olon ton kataxoriseon pou exoun gini. an den exoun gini kata xorisis epistrefi null
         setFileColNames(cn.getColNames());
         return fileColNames;
     }
 
     @Override
-    public List<String[]> filterStructuredFile(String pAlias, Map<String, List<String>> pAtomicFilters){//epistrefi mia lista pou onomata kataxoriseon pou ikanopioun to sintheto filtro(diladi oulla ta mini filtra)
+    public List<String[]> filterStructuredFile(String pAlias, Map<String, List<String>> pAtomicFilters){//epistrefi mia lista pou onomata kataxoriseon pou ikanopioun to sintheto filtro
         cn.setAllFileData(AllFileData);
         setF.Filtering(AllFileData, pAtomicFilters); 
 

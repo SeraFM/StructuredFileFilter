@@ -37,7 +37,7 @@ public class FilteringEngineFactory implements FilteringEngineInterface {
 
         Map<String, List<String>> filteredMap= new HashMap<>();//ena kainourio map pou tha mpei mesa to filtrarismeno arxeio//
         int filterlength = unfilteredmap.get(atomicfil(List.size());
-        for (int i=0; i <= filterlength; i++){//vazoume to pedio to opio theloume na filtraristei sto kaiourio map//
+        for (int i=0; i <= filterlength; i++){//vazoume to pedio to opio theloume na filtraristei sto kainourio map//
 
             filteredMap.put(atomicfil,List.add(unfliteredmap.get(atomicfil(List.get(i))) );
 
