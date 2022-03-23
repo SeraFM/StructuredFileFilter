@@ -1,6 +1,6 @@
 # Stuctured File Filter
 
-### Stuctured File Filter allows an Analyzer to set filters in structured data files (i.e., files whose records have specific fields), and visualize the records of the files that meet their criteria filter put by the analyzer.
+- Stuctured File Filter allows an Analyzer to set filters in structured data files (i.e., files whose records have specific fields), and visualize the records of the files that meet their criteria filter put by the analyzer.
 
 - A structured data file is a text file that contains records, each one of which catches a line in the file. Each record has a specific set from fields, which are separated from each other by a separating symbol. Usually this set is the comma (so we have CSV - Comma Separated Values files), or the tab (tsv - Tab Separated Values), or more rarely ‘|’. The first line of the file contains their names fields.
 
